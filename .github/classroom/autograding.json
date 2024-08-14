@@ -1,7 +1,7 @@
 {
     "tests": [
       {
-        "name": "Test if File exists",
+        "name": "Test Übung 1",
         "setup": "",
         "run": "python -m unittest test_sets.Test.test_exercise_1",
         "input": "",
@@ -11,7 +11,7 @@
         "points": 10
       },
       {
-        "name": "Test largest_number Function",
+        "name": "Test Übung 2",
         "setup": "",
         "run": "python -m unittest test_sets.Test.test_exercise_2",
         "input": "",
