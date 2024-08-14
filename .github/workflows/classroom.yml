@@ -1,0 +1,25 @@
+name: GitHub Classroom Workflow
+
+on: [push]
+
+jobs:
+  build:
+    name: Autograding
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Checkout Unittests
+        uses: actions/checkout@v2
+        with:
+          repository: 'Techstarter-GH-Classroom-Test/classroom_unit_tests'
+          path: unittests
+          ref: 'main' 
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Copy Unittests
+        run: cp unittests/* .
+
+      - uses: education/autograding@v1
